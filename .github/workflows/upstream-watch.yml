@@ -1,0 +1,77 @@
+name: Upstream pin watch
+
+# Compares the shared aurora-silicon pins (alarm-aurora's sources.json,
+# mirrored in this repo at scripts/sources.json) once a day. When a
+# component's version or commit moves upstream, an issue is opened so
+# the overlay bump is not missed. It never edits ebuilds by itself:
+# a pin bump still needs Manifest regeneration and testing.
+
+on:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch upstream sources.json
+        run: |
+          for branch in main master; do
+            if curl -fsSL "https://raw.githubusercontent.com/aurora-silicon/alarm-aurora/$branch/sources.json" -o /tmp/upstream.json; then
+              echo "fetched from branch $branch"
+              break
+            fi
+          done
+          test -s /tmp/upstream.json
+
+      - name: Compare pins
+        id: compare
+        run: |
+          python3 - <<'EOF'
+          import json, os
+          old = json.load(open('scripts/sources.json'))
+          new = json.load(open('/tmp/upstream.json'))
+          lines = []
+          for name in sorted(set(old) | set(new)):
+              o, n = old.get(name), new.get(name)
+              if o is None:
+                  lines.append(f"| {name} | — | **new component** {n.get('version','?')} @ {n.get('commit','')[:12]} |")
+              elif n is None:
+                  lines.append(f"| {name} | {o.get('version','?')} | **removed upstream** |")
+              elif o.get('version') != n.get('version') or o.get('commit') != n.get('commit'):
+                  lines.append(f"| {name} | {o.get('version','?')} @ {o.get('commit','')[:12]} | {n.get('version','?')} @ {n.get('commit','')[:12]} |")
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
+              fh.write(f"changed={'true' if lines else 'false'}\n")
+          with open('/tmp/report.md', 'w') as fh:
+              if lines:
+                  fh.write("The shared aurora-silicon pins moved upstream.\n\n")
+                  fh.write("| component | pinned here | upstream |\n|---|---|---|\n")
+                  fh.write("\n".join(lines) + "\n\n")
+                  fh.write("Next step: bump the affected ebuild(s), regenerate Manifests, "
+                           "refresh scripts/sources.json, and re-run the chroot checks.\n")
+              else:
+                  fh.write("No pin changes.\n")
+          print(open('/tmp/report.md').read())
+          EOF
+
+      - name: Open an issue if pins moved
+        if: steps.compare.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          existing=$(gh issue list --state open --search 'in:title "Upstream pins changed"' --json number --jq 'length')
+          if [ "$existing" -gt 0 ]; then
+            echo "An upstream-pins issue is already open; not duplicating."
+            cat /tmp/report.md >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          gh issue create \
+            --title "Upstream pins changed ($(date -u +%F))" \
+            --body-file /tmp/report.md
