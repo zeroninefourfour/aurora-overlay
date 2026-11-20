@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Aurora Gentoo overlay</name>
+	</maintainer>
+	<longdescription>
+		Feed-forward speaker protection daemon for Apple laptops (currently ships a profile for the J700 MacBook Neo only).
+	</longdescription>
+	<upstream>
+		<remote-id type="github">aurora-silicon/speakerguardd</remote-id>
+	</upstream>
+</pkgmetadata>

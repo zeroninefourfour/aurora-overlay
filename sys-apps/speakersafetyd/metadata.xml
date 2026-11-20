@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Aurora Gentoo overlay</name>
+	</maintainer>
+	<longdescription>
+		Speaker protection daemon for Apple silicon Macs. This is
+		::asahi's speakersafetyd 3.0.0 shadowed into the Aurora
+		overlay with its UCM dependency pointed at
+		media-libs/alsa-ucm-conf-aurora instead of the Asahi UCM
+		package, which cannot coexist with the Aurora stack.
+	</longdescription>
+	<upstream>
+		<remote-id type="github">AsahiLinux/speakersafetyd</remote-id>
+	</upstream>
+</pkgmetadata>

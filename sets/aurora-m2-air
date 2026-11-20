@@ -1,0 +1,22 @@
+# M2 MacBook Air (T8112; J413 13" / J415 15") — the full Aurora stack
+# with the per-model choices locked for this machine:
+#  * speakers: speakersafetyd (ships j413.conf/j415.conf), NOT
+#    speakerguardd (its only profile is j700 / MacBook Neo)
+#  * AVD: T8112 uses the v3-generation AVD firmware built by avd-fw
+#  * UCM: "MacBook Air J413.conf" is present in alsa-ucm-conf-aurora 10
+sys-kernel/aurora-sources
+sys-boot/aura
+sys-boot/uboot-aurora
+sys-apps/aurora-bless
+sys-apps/aurora-firstboot
+sys-apps/aurora-power-budget
+sys-apps/aurora-secboot
+sys-apps/aurora-boot
+sys-firmware/avd-fw
+sys-firmware/aurora-firmware
+sys-firmware/aurora-wifi-firmware
+net-misc/networkmanager-aurora
+media-libs/libva-v4l2-request-avd
+media-libs/alsa-ucm-conf-aurora
+media-libs/aurora-audio
+sys-apps/speakersafetyd

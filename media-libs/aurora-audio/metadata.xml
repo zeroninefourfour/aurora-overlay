@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Aurora Gentoo overlay</name>
+	</maintainer>
+	<longdescription>
+		PipeWire/WirePlumber audio configuration (graphs, DSP and speaker tuning) for Apple Silicon, pinned to the Aurora revision.
+	</longdescription>
+	<upstream>
+		<remote-id type="github">aurora-silicon/asahi-audio</remote-id>
+	</upstream>
+</pkgmetadata>

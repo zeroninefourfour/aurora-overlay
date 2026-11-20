@@ -1,0 +1,2 @@
+enable aurora-firstboot.service
+enable aurora-initrd-keymap.path

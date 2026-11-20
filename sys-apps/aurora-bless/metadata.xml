@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Aurora Gentoo overlay</name>
+	</maintainer>
+	<longdescription>
+		Aurora Apple Silicon startup-volume selector with Neo NVRAM
+		support, ported from alarm-aurora. Installs aurora-bless,
+		aurora-nvram, aurora-btsync and aurora-panel-nits, replacing
+		the stock asahi-bless / asahi-nvram (the asahi-* names keep
+		working through symlinks).
+	</longdescription>
+	<upstream>
+		<remote-id type="github">aurora-silicon/aurora-bless</remote-id>
+	</upstream>
+</pkgmetadata>

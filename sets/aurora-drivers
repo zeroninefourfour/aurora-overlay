@@ -1,0 +1,19 @@
+# Core Aurora driver stack (no desktop, no installer)
+sys-kernel/aurora-sources
+sys-boot/aura
+sys-boot/uboot-aurora
+sys-apps/aurora-bless
+sys-apps/aurora-firstboot
+sys-apps/aurora-power-budget
+sys-apps/aurora-secboot
+sys-apps/aurora-boot
+sys-firmware/avd-fw
+sys-firmware/aurora-firmware
+sys-firmware/aurora-wifi-firmware
+net-misc/networkmanager-aurora
+media-libs/libva-v4l2-request-avd
+media-libs/alsa-ucm-conf-aurora
+media-libs/aurora-audio
+sys-apps/speakerguardd
+sys-apps/aurora-kbd-light
+media-video/aurora-camera-denoise

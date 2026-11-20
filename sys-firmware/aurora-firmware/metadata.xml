@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Aurora Gentoo overlay</name>
+	</maintainer>
+	<longdescription>
+		Aurora target-device firmware and peripheral admission:
+		blacklists drivers that request per-machine firmware during
+		probe, extracts the vendor firmware from the ESP in the
+		initrd (via the bundled dracut module), points the kernel
+		firmware search path at it, and only then admits the
+		peripherals (AOP, radios, dockchannel keyboard/trackpad)
+		with explicit modprobes. Port of alarm-aurora aurora-firmware;
+		the mkinitcpio hook was ported to dracut.
+	</longdescription>
+	<upstream>
+		<remote-id type="github">aurora-silicon/alarm-aurora</remote-id>
+	</upstream>
+</pkgmetadata>

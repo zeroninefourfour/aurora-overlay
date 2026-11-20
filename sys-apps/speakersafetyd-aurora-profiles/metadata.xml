@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Aurora Gentoo overlay</name>
+	</maintainer>
+	<longdescription>Additional speakersafetyd profiles for Aurora-supported Macs (J616, J575c), a udev rule and a warm-restart drop-in, ported from alarm-aurora. The M2 Air profiles ship inside speakersafetyd itself.</longdescription>
+	<upstream>
+		<remote-id type="github">aurora-silicon/alarm-aurora</remote-id>
+	</upstream>
+</pkgmetadata>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Aurora Gentoo overlay</name>
+	</maintainer>
+	<longdescription>CPU power budget for the power-saver profile on Apple silicon, ported from alarm-aurora (aurora-platform split package).</longdescription>
+	<upstream>
+		<remote-id type="github">aurora-silicon/aurora-platform</remote-id>
+	</upstream>
+</pkgmetadata>

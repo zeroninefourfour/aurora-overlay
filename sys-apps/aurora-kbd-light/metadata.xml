@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<upstream>
+		<remote-id type="github">aurora-silicon/kbd-light</remote-id>
+	</upstream>
+	<longdescription>
+		Keyboard backlight daemon that follows the ambient light sensor on
+		Apple silicon MacBooks, like macOS. Aurora Silicon port of the
+		Asahi concept; source pin is shared with fedora-aurora and
+		nixos-aurora via alarm-aurora's sources.json.
+	</longdescription>
+</pkgmetadata>

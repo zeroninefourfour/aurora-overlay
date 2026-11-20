@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Aurora Gentoo overlay</name>
+	</maintainer>
+	<longdescription>
+		Keeps the Wi-Fi and Bluetooth firmware on the installed macOS,
+		as macOS does: a systemd service reads the firmware from the
+		macOS system volume (APFS, read-only) and stages it so it is
+		applied at the next boot. Port of alarm-aurora
+		aurora-wifi-firmware 0.2, pinned to the shared sources.json
+		aurora-installer commit.
+	</longdescription>
+	<upstream>
+		<remote-id type="github">aurora-silicon/aurora-installer</remote-id>
+	</upstream>
+	<use>
+		<flag name="lzfse">Handle LZFSE-compressed files on the macOS system volume via app-arch/lzfse</flag>
+	</use>
+</pkgmetadata>

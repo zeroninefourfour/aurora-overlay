@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Aurora Gentoo overlay</name>
+	</maintainer>
+	<longdescription>
+		Aurora fork of Das U-Boot for Apple Silicon (Stage 2 bootloader loaded by Aura).
+	</longdescription>
+	<upstream>
+		<remote-id type="github">aurora-silicon/u-boot</remote-id>
+	</upstream>
+</pkgmetadata>

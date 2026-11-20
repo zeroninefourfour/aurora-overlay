@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Aurora Gentoo overlay</name>
+	</maintainer>
+	<longdescription>
+		VA-API driver on top of V4L2 stateless request decoders, carrying the fixes needed by the Apple AVD decoder in the Aurora kernel.
+	</longdescription>
+	<upstream>
+		<remote-id type="github">omacom/libva-v4l2_request</remote-id>
+	</upstream>
+</pkgmetadata>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Aurora Gentoo overlay</name>
+	</maintainer>
+	<longdescription>Aurora boot integration (early-KMS initrd display via dracut, GRUB defaults, image preset), ported from alarm-aurora; mkinitcpio hooks ported to dracut, Arch keyring/libalpm pieces deliberately not ported.</longdescription>
+	<upstream>
+		<remote-id type="github">aurora-silicon/alarm-aurora</remote-id>
+	</upstream>
+</pkgmetadata>

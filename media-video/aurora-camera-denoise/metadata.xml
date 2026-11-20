@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<upstream>
+		<remote-id type="github">aurora-silicon/camera-denoise</remote-id>
+	</upstream>
+	<longdescription>
+		PipeWire filter that denoises the built-in camera on Apple silicon
+		laptops, like macOS. Backends: cdn-backend-ave.so (video encoder
+		temporal filter) and cdn-backend-ane.so (Neural Engine low-light
+		stage); without them the filter uses the built-in CPU backend.
+	</longdescription>
+</pkgmetadata>

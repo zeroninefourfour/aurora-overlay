@@ -1,0 +1,373 @@
+{
+  "kernel-aurora": {
+    "repository": "https://github.com/aurora-silicon/linux",
+    "commit": "9125b31475836ce0a6634df45b539c6d604f36a5",
+    "version": "7.3.0",
+    "source_url": "https://codeload.github.com/aurora-silicon/linux/tar.gz/9125b31475836ce0a6634df45b539c6d604f36a5",
+    "archive_root": "linux-9125b31475836ce0a6634df45b539c6d604f36a5",
+    "sha256": "9a3969b52c6f41017b36e8bc805b63b0215fddf31b91fc5d45dd7854ab3c4f7b"
+  },
+  "aura": {
+    "repository": "https://github.com/aurora-silicon/aura",
+    "commit": "5dcf62d0bf28e42c0e3f4ece44908643ffd40837",
+    "version": "1.0.0b13.1",
+    "source_url": "https://codeload.github.com/aurora-silicon/aura/tar.gz/5dcf62d0bf28e42c0e3f4ece44908643ffd40837",
+    "archive_root": "aura-5dcf62d0bf28e42c0e3f4ece44908643ffd40837",
+    "sha256": "a9a8c81ac7631931688adffbb6c2899ffaf28ef5b1a807e78a9f87dbb46c505d"
+  },
+  "uboot-aurora": {
+    "repository": "https://github.com/aurora-silicon/u-boot",
+    "commit": "250385f8c8aaafd47a8f7990f6efe0443c28d0b5",
+    "version": "2026.07",
+    "source_url": "https://codeload.github.com/aurora-silicon/u-boot/tar.gz/250385f8c8aaafd47a8f7990f6efe0443c28d0b5",
+    "archive_root": "u-boot-250385f8c8aaafd47a8f7990f6efe0443c28d0b5",
+    "sha256": "54733c99013b87f7703065fd7a96e0960dfbbeeefaf3462c1fd0789526105e8a"
+  },
+  "mesa-aurora": {
+    "repository": "https://github.com/aurora-silicon/mesa",
+    "commit": "d4ad4a4dce6d1d23ecd897d6d73fadf9ab618614",
+    "version": "26.3.0",
+    "source_url": "https://codeload.github.com/aurora-silicon/mesa/tar.gz/d4ad4a4dce6d1d23ecd897d6d73fadf9ab618614",
+    "archive_root": "mesa-d4ad4a4dce6d1d23ecd897d6d73fadf9ab618614",
+    "sha256": "6f8d930b3d846af6416dab55c82a9ccf8ec0d4cbbbe739016262268d7dc9ec4b"
+  },
+  "speakerguardd": {
+    "repository": "https://github.com/aurora-silicon/speakerguardd",
+    "commit": "0287029648842be7b62ce9869ceaf5dbe9555831",
+    "version": "0.1.12",
+    "source_url": "https://codeload.github.com/aurora-silicon/speakerguardd/tar.gz/0287029648842be7b62ce9869ceaf5dbe9555831",
+    "archive_root": "speakerguardd-0287029648842be7b62ce9869ceaf5dbe9555831",
+    "sha256": "2692684c895396aec23fec34d1b9a71f789bbc2a58f35104470a66869f4fca77"
+  },
+  "speakerguardd-v2": {
+    "repository": "https://github.com/aurora-silicon/speakerguardd",
+    "commit": "bbd9ed30ac43ff4fee3a8b279ff994180d8148cb",
+    "version": "1.0.0-alpha.1",
+    "source_url": "https://codeload.github.com/aurora-silicon/speakerguardd/tar.gz/bbd9ed30ac43ff4fee3a8b279ff994180d8148cb",
+    "archive_root": "speakerguardd-bbd9ed30ac43ff4fee3a8b279ff994180d8148cb",
+    "sha256": "fe81a2aae7c0d58b335ee5650db872c77b0de975fb369c323ddee303b29de83f"
+  },
+  "aurora-camera-denoise": {
+    "repository": "https://github.com/aurora-silicon/camera-denoise",
+    "commit": "aa7a42ff3f26ac47c07b4cdb4ab1bfc5337291af",
+    "version": "0.1.0",
+    "source_url": "https://codeload.github.com/aurora-silicon/camera-denoise/tar.gz/aa7a42ff3f26ac47c07b4cdb4ab1bfc5337291af",
+    "archive_root": "camera-denoise-aa7a42ff3f26ac47c07b4cdb4ab1bfc5337291af",
+    "sha256": "055616e027955455a6b21ef437aa46b061cd9176ab6f4241fa466e7b0d0bb15e"
+  },
+  "aurora-kbd-light": {
+    "repository": "https://github.com/aurora-silicon/kbd-light",
+    "commit": "727076b83eb65b0162317a9e2fa0ba850df1f5ca",
+    "version": "0.1.0",
+    "source_url": "https://codeload.github.com/aurora-silicon/kbd-light/tar.gz/727076b83eb65b0162317a9e2fa0ba850df1f5ca",
+    "archive_root": "kbd-light-727076b83eb65b0162317a9e2fa0ba850df1f5ca",
+    "sha256": "9419eea57c51fd4ccf83fe764bb85c18f9054d684d21415d189fa46fe568e88c"
+  },
+  "aurora-xart": {
+    "repository": "https://github.com/aurora-silicon/aurora-xart",
+    "commit": "83ae1899d0a70e84cb464b8443a3458408b2d28e",
+    "version": "0.1.0",
+    "source_url": "https://codeload.github.com/aurora-silicon/aurora-xart/tar.gz/83ae1899d0a70e84cb464b8443a3458408b2d28e",
+    "archive_root": "aurora-xart-83ae1899d0a70e84cb464b8443a3458408b2d28e",
+    "sha256": "1d91de60345f0c0633d00402aaec60de3ab52c8c560ae5d7a1ffc82909d7bdda"
+  },
+  "alsa-ucm-conf-aurora": {
+    "repository": "https://github.com/aurora-silicon/alsa-ucm-conf-asahi",
+    "commit": "96b3206d2f4c6f89145a2f1b5395a833fb2ae0af",
+    "version": "10",
+    "source_url": "https://codeload.github.com/aurora-silicon/alsa-ucm-conf-asahi/tar.gz/96b3206d2f4c6f89145a2f1b5395a833fb2ae0af",
+    "archive_root": "alsa-ucm-conf-asahi-96b3206d2f4c6f89145a2f1b5395a833fb2ae0af",
+    "sha256": "84e6014d04bde6b8abd69e7eaafee314a7a582311ce1e0aed9a630bcaa8ae8df"
+  },
+  "aurora-audio": {
+    "repository": "https://github.com/aurora-silicon/asahi-audio",
+    "commit": "c967141161bea3badc7754e23d80b39ffb1bdafd",
+    "version": "4.1",
+    "source_url": "https://codeload.github.com/aurora-silicon/asahi-audio/tar.gz/c967141161bea3badc7754e23d80b39ffb1bdafd",
+    "archive_root": "asahi-audio-c967141161bea3badc7754e23d80b39ffb1bdafd",
+    "sha256": "4a5fc1eb37113742791eb632819fb09301f97b76a78586e96760442be6c87dd7"
+  },
+  "aurora-bless": {
+    "repository": "https://github.com/aurora-silicon/aurora-bless",
+    "commit": "9b47a17827854588d458b1dcc8018c66f5c3237f",
+    "version": "0.4.4",
+    "source_url": "https://codeload.github.com/aurora-silicon/aurora-bless/tar.gz/9b47a17827854588d458b1dcc8018c66f5c3237f",
+    "archive_root": "aurora-bless-9b47a17827854588d458b1dcc8018c66f5c3237f",
+    "sha256": "010dd39c7ece1ad6019e365b87580daaf0eea698912355f10934d1165e362b78"
+  },
+  "aurora-neo-platform-config": {
+    "repository": "https://github.com/aurora-silicon/aurora-neo-platform-config",
+    "commit": "8f18039e37ccdec03049d04844d59de2909f680c",
+    "version": "0.1.0",
+    "source_url": "https://codeload.github.com/aurora-silicon/aurora-neo-platform-config/tar.gz/8f18039e37ccdec03049d04844d59de2909f680c",
+    "archive_root": "aurora-neo-platform-config-8f18039e37ccdec03049d04844d59de2909f680c",
+    "sha256": "5496dc8d28688b30ec4d5e3007a4c911a751663c1d7c2a937bb6ae397d3d4314"
+  },
+  "bankstown": {
+    "repository": "https://github.com/chadmed/bankstown",
+    "commit": "8e6f96f06d0e51c2a1dc513cf2fdf57ab32a2a64",
+    "version": "1.1.0",
+    "source_url": "https://codeload.github.com/chadmed/bankstown/tar.gz/8e6f96f06d0e51c2a1dc513cf2fdf57ab32a2a64",
+    "archive_root": "bankstown-8e6f96f06d0e51c2a1dc513cf2fdf57ab32a2a64",
+    "sha256": "11caa8cb41dfe724692414a378faf7425a0319ced2ad90c2eeaa90710d3eee38"
+  },
+  "aurora-firstboot": {
+    "repository": "https://github.com/aurora-silicon/aurora-platform",
+    "commit": "ddf5285e116b3551ed2b025112f86effaadf299d",
+    "version": "0.1.13",
+    "source_url": "https://codeload.github.com/aurora-silicon/aurora-platform/tar.gz/ddf5285e116b3551ed2b025112f86effaadf299d",
+    "archive_root": "aurora-platform-ddf5285e116b3551ed2b025112f86effaadf299d",
+    "sha256": "fd6d1f03a1d64709611a600d885f5857ec71f3e2f6f2a3eead76d06733dfd644"
+  },
+  "libva-v4l2-request-avd": {
+    "repository": "https://github.com/omacom/libva-v4l2_request",
+    "commit": "4f60c51f7841dd74bb61c94a4ad31e630bbdab01",
+    "version": "1.3.r11",
+    "source_url": "https://codeload.github.com/omacom/libva-v4l2_request/tar.gz/4f60c51f7841dd74bb61c94a4ad31e630bbdab01",
+    "archive_root": "libva-v4l2_request-4f60c51f7841dd74bb61c94a4ad31e630bbdab01",
+    "sha256": "826fda7396374daea1c39c08e2057dd2b4775cf0205c59bce2d30ce2bfd212a4"
+  },
+  "avd-fw": {
+    "repository": "https://github.com/aurora-silicon/avd-fw",
+    "commit": "6062e8516c0a751bc8e50f5d604a17395923189f",
+    "version": "0.1",
+    "source_url": "https://codeload.github.com/aurora-silicon/avd-fw/tar.gz/6062e8516c0a751bc8e50f5d604a17395923189f",
+    "archive_root": "avd-fw-6062e8516c0a751bc8e50f5d604a17395923189f",
+    "sha256": "49a631c8ba0c87bac187376bc642acaad1f62791dde6ed285fbc2bad21d60cf0"
+  },
+  "upower-aurora": {
+    "repository": "https://github.com/aurora-silicon/upower",
+    "commit": "d8a24ffc5b9a49f71a28517f7c8b92b16701597a",
+    "version": "1.91.5",
+    "source_url": "https://codeload.github.com/aurora-silicon/upower/tar.gz/d8a24ffc5b9a49f71a28517f7c8b92b16701597a",
+    "archive_root": "upower-d8a24ffc5b9a49f71a28517f7c8b92b16701597a",
+    "sha256": "ad2fa2023b551f851b50957800679d2b5399cc4707fdcb3c4870d3a9c2f9e292"
+  },
+  "libfprint-aurora": {
+    "repository": "https://gitlab.freedesktop.org/libfprint/libfprint",
+    "commit": "80a4b5ec612892c5c056c48dddaa561452cf37ec",
+    "version": "1.94.100",
+    "source_url": "https://gitlab.freedesktop.org/api/v4/projects/libfprint%2Flibfprint/repository/archive.tar.gz?sha=80a4b5ec612892c5c056c48dddaa561452cf37ec",
+    "archive_root": "libfprint-80a4b5ec612892c5c056c48dddaa561452cf37ec-80a4b5ec612892c5c056c48dddaa561452cf37ec",
+    "sha256": "94ff7f3689d14da28389a4d9cad5fb523065bbed3e6c8e3694522fde1316e780"
+  },
+  "mesa-aurora-fex-guest": {
+    "repository": "https://github.com/aurora-silicon/mesa",
+    "commit": "d4ad4a4dce6d1d23ecd897d6d73fadf9ab618614",
+    "version": "26.3.0",
+    "source_url": "https://codeload.github.com/aurora-silicon/mesa/tar.gz/d4ad4a4dce6d1d23ecd897d6d73fadf9ab618614",
+    "archive_root": "mesa-d4ad4a4dce6d1d23ecd897d6d73fadf9ab618614",
+    "sha256": "6f8d930b3d846af6416dab55c82a9ccf8ec0d4cbbbe739016262268d7dc9ec4b"
+  },
+  "alsa-utils": {
+    "repository": "https://github.com/alsa-project/alsa-utils",
+    "commit": "9feb22ba45b48729729c8d194aaf1bc082a6842a",
+    "version": "1.2.16",
+    "source_url": "https://www.alsa-project.org/files/pub/utils/alsa-utils-1.2.16.tar.bz2",
+    "archive_file": "alsa-utils-1.2.16.tar.bz2",
+    "archive_root": "alsa-utils-1.2.16",
+    "sha256": "092399d5e8749a1d5e188e393157521cec4b75693b60ebb79bbce728cff2232c"
+  },
+  "omarchy-ane-tools": {
+    "repository": "https://github.com/joshuaswarren/omarchy-ane",
+    "commit": "68e92712bbffa08f5002dcc542434fe1393f0578",
+    "version": "0.5.7",
+    "source_url": "https://codeload.github.com/joshuaswarren/omarchy-ane/tar.gz/68e92712bbffa08f5002dcc542434fe1393f0578",
+    "archive_root": "omarchy-ane-68e92712bbffa08f5002dcc542434fe1393f0578",
+    "sha256": "09fee8d386728939d4752acb21a3ff99192809bf608f8d1bca6cd426b460aea6",
+    "redistribute_source": false
+  },
+  "mil-hwx-compiler": {
+    "repository": "https://github.com/joshuaswarren/mil-hwx-compiler",
+    "commit": "927013f5480768b07c8e62a866e1514c41aba778",
+    "source_url": "https://codeload.github.com/joshuaswarren/mil-hwx-compiler/tar.gz/927013f5480768b07c8e62a866e1514c41aba778",
+    "archive_root": "mil-hwx-compiler-927013f5480768b07c8e62a866e1514c41aba778",
+    "sha256": "45eddcad03d68aaccb78d622711b91f144a88f9df952784e8c64c9bd1eb03790",
+    "version": "0.3.1",
+    "tag": "v0.3.1",
+    "extra_sources": {
+      "libobjc2": {
+        "repository": "https://github.com/gnustep/libobjc2",
+        "commit": "a1faad66cee79f29c4ca268b004111edc33a2ae2",
+        "source_url": "https://codeload.github.com/gnustep/libobjc2/tar.gz/a1faad66cee79f29c4ca268b004111edc33a2ae2",
+        "archive_root": "libobjc2-a1faad66cee79f29c4ca268b004111edc33a2ae2",
+        "sha256": "695405064778adc40b77ba78e29594dfe0c07107dc3882a3276684f6ca2fe1b1"
+      },
+      "gnustep-make": {
+        "repository": "https://github.com/gnustep/tools-make",
+        "commit": "d0349cc83a23367acdc53df364f73504c281b26c",
+        "source_url": "https://codeload.github.com/gnustep/tools-make/tar.gz/d0349cc83a23367acdc53df364f73504c281b26c",
+        "archive_root": "tools-make-d0349cc83a23367acdc53df364f73504c281b26c",
+        "sha256": "687a79b3f1fa00d56085c64906bdbc3634fa891379879960c67f520abfd89fc6"
+      },
+      "gnustep-base": {
+        "repository": "https://github.com/gnustep/libs-base",
+        "commit": "3d7013e144b153abcd6c088dc8d6c64ebd43bc4b",
+        "source_url": "https://codeload.github.com/gnustep/libs-base/tar.gz/3d7013e144b153abcd6c088dc8d6c64ebd43bc4b",
+        "archive_root": "libs-base-3d7013e144b153abcd6c088dc8d6c64ebd43bc4b",
+        "sha256": "2c6b39a703e755ca6947cee41db1527fe95f5ab5f24b55fc02593fb0e3ca6520"
+      }
+    },
+    "redistribute_source": false
+  },
+  "fex-emu": {
+    "repository": "https://github.com/aurora-silicon/fex",
+    "commit": "0c08727ae4c0c30601c962d982d4864b77dd17a2",
+    "source_url": "https://codeload.github.com/aurora-silicon/fex/tar.gz/0c08727ae4c0c30601c962d982d4864b77dd17a2",
+    "archive_root": "fex-0c08727ae4c0c30601c962d982d4864b77dd17a2",
+    "sha256": "b0e90b68f4eb009c02147d8859c2111baaf257dee916924be7ac833e09379665",
+    "version": "2610",
+    "extra_sources": {
+      "cpp-optparse": {
+        "repository": "https://github.com/Sonicadvance1/cpp-optparse",
+        "commit": "9f94388a339fcbb0bc95c17768eb786c85988f6e",
+        "source_url": "https://codeload.github.com/Sonicadvance1/cpp-optparse/tar.gz/9f94388a339fcbb0bc95c17768eb786c85988f6e",
+        "archive_root": "cpp-optparse-9f94388a339fcbb0bc95c17768eb786c85988f6e",
+        "sha256": "68e6b500890270517d226abbc3610135de1600ddde29f44c9b68cca5e2a17f60"
+      },
+      "drm-headers": {
+        "repository": "https://github.com/FEX-Emu/drm-headers",
+        "commit": "3e49836995c1dcb3df709440ad2f270b569c6a5f",
+        "source_url": "https://codeload.github.com/FEX-Emu/drm-headers/tar.gz/3e49836995c1dcb3df709440ad2f270b569c6a5f",
+        "archive_root": "drm-headers-3e49836995c1dcb3df709440ad2f270b569c6a5f",
+        "sha256": "3d3653841f81ea5be1a15cd4b458f048c1fffbcd97fcc808454a7fbe7cf1a555"
+      },
+      "jemalloc": {
+        "repository": "https://github.com/FEX-Emu/jemalloc",
+        "commit": "8436195ad5e1bc347d9b39743af3d29abee59f06",
+        "source_url": "https://codeload.github.com/FEX-Emu/jemalloc/tar.gz/8436195ad5e1bc347d9b39743af3d29abee59f06",
+        "archive_root": "jemalloc-8436195ad5e1bc347d9b39743af3d29abee59f06",
+        "sha256": "800cc0653f5bc2f0ed2cc7bb383f8eeda1ff94b2e89eaee0ccc57bd5fb002fe4"
+      },
+      "range-v3": {
+        "repository": "https://github.com/ericniebler/range-v3",
+        "commit": "ca1388fb9da8e69314dda222dc7b139ca84e092f",
+        "source_url": "https://codeload.github.com/ericniebler/range-v3/tar.gz/ca1388fb9da8e69314dda222dc7b139ca84e092f",
+        "archive_root": "range-v3-ca1388fb9da8e69314dda222dc7b139ca84e092f",
+        "sha256": "57a6fca5d60a85b84e8efecc62f0ca064e6b1f89b97b513284fe7f5bd43d49eb"
+      },
+      "rpmalloc": {
+        "repository": "https://github.com/FEX-Emu/rpmalloc",
+        "commit": "ed227446afce6ff505b312bae1e10a3daaeeea39",
+        "source_url": "https://codeload.github.com/FEX-Emu/rpmalloc/tar.gz/ed227446afce6ff505b312bae1e10a3daaeeea39",
+        "archive_root": "rpmalloc-ed227446afce6ff505b312bae1e10a3daaeeea39",
+        "sha256": "f14761cc0c8976aed669475087021661f269699ef8297885b665eed4b764b087"
+      },
+      "Vulkan-Headers": {
+        "repository": "https://github.com/KhronosGroup/Vulkan-Headers",
+        "commit": "ee2ec5fd83dafce291024683b50dc89219333076",
+        "source_url": "https://codeload.github.com/KhronosGroup/Vulkan-Headers/tar.gz/ee2ec5fd83dafce291024683b50dc89219333076",
+        "archive_root": "Vulkan-Headers-ee2ec5fd83dafce291024683b50dc89219333076",
+        "sha256": "df7a152381a7fdaf98e36de7716b8d6d6ead776764bc76d1a1aef9049d1bca89"
+      },
+      "vixl": {
+        "repository": "https://github.com/FEX-Emu/vixl",
+        "commit": "6561d40650885ad24fbd0aa0cdb20ccb4808d444",
+        "source_url": "https://codeload.github.com/FEX-Emu/vixl/tar.gz/6561d40650885ad24fbd0aa0cdb20ccb4808d444",
+        "archive_root": "vixl-6561d40650885ad24fbd0aa0cdb20ccb4808d444",
+        "sha256": "03caa03990ee02c6d48781368332c4b9019ec2101addab3aa29eb359bb7d7653"
+      },
+      "unordered_dense": {
+        "repository": "https://github.com/martinus/unordered_dense",
+        "commit": "3234af2c03549bc85656bfd3a86993bf1cd8aef1",
+        "source_url": "https://codeload.github.com/martinus/unordered_dense/tar.gz/3234af2c03549bc85656bfd3a86993bf1cd8aef1",
+        "archive_root": "unordered_dense-3234af2c03549bc85656bfd3a86993bf1cd8aef1",
+        "sha256": "aa68d77ef88475db710bf647017f5ccb13ceec6f55f3defa37e995b043eb990b"
+      },
+      "fmt": {
+        "repository": "https://github.com/fmtlib/fmt",
+        "commit": "c07e2aa4b130b4fd359a1c6455a5201b17af01fa",
+        "source_url": "https://codeload.github.com/fmtlib/fmt/tar.gz/c07e2aa4b130b4fd359a1c6455a5201b17af01fa",
+        "archive_root": "fmt-c07e2aa4b130b4fd359a1c6455a5201b17af01fa",
+        "sha256": "e0099a9035521b29523915fae2e5f1b38229df896191e4a046f7b0d55a45c7d2"
+      },
+      "xxHash": {
+        "repository": "https://github.com/Cyan4973/xxHash",
+        "commit": "e626a72bc2321cd320e953a0ccf1584cad60f363",
+        "source_url": "https://codeload.github.com/Cyan4973/xxHash/tar.gz/e626a72bc2321cd320e953a0ccf1584cad60f363",
+        "archive_root": "xxHash-e626a72bc2321cd320e953a0ccf1584cad60f363",
+        "sha256": "34e71c085636fbc1726482996d92719d0a16e6a6097970ecf2990a27b3821162"
+      }
+    }
+  },
+  "aurora-steam-native": {
+    "repository": "https://github.com/aurora-silicon/aurora-steam-native",
+    "commit": "c06f610e3604c3f2b1b8466dff60d6878d0cd0da",
+    "source_url": "https://codeload.github.com/aurora-silicon/aurora-steam-native/tar.gz/c06f610e3604c3f2b1b8466dff60d6878d0cd0da",
+    "archive_root": "aurora-steam-native-c06f610e3604c3f2b1b8466dff60d6878d0cd0da",
+    "sha256": "c81a8425164322d77155e8c24eb9a73a379637873948cd85cfc5531ba58f25c0"
+  },
+  "aurora-touchid-rearm": {
+    "repository": "https://github.com/aurora-silicon/aurora-sep-userspace",
+    "commit": "0996f01f55c64cfebadb5b48602690ca9d5f72aa",
+    "version": "1",
+    "source_url": "https://codeload.github.com/aurora-silicon/aurora-sep-userspace/tar.gz/0996f01f55c64cfebadb5b48602690ca9d5f72aa",
+    "archive_root": "aurora-sep-userspace-0996f01f55c64cfebadb5b48602690ca9d5f72aa",
+    "sha256": "0dd1a3761de7bdaf818140da9c7d16e120d37f82ef3b6a2107a2d3707b721c72"
+  },
+  "aurora-fido": {
+    "repository": "https://github.com/aurora-silicon/aurora-sep-userspace",
+    "commit": "2ea454e0a222aea7b970f9bf061ee6ea3cd326ec",
+    "version": "0.2.0",
+    "source_url": "https://codeload.github.com/aurora-silicon/aurora-sep-userspace/tar.gz/2ea454e0a222aea7b970f9bf061ee6ea3cd326ec",
+    "archive_root": "aurora-sep-userspace-2ea454e0a222aea7b970f9bf061ee6ea3cd326ec",
+    "sha256": "87bfd7cd5d70a009e6b5e93fbbe5c08c1193602a7fbfad196924bab31c8700af"
+  },
+  "aurora-sep-sk": {
+    "repository": "https://github.com/aurora-silicon/aurora-sep-userspace",
+    "commit": "72eaf547174745b9c1e008faeeaa1e98b80bc310",
+    "version": "0.1.0",
+    "source_url": "https://codeload.github.com/aurora-silicon/aurora-sep-userspace/tar.gz/72eaf547174745b9c1e008faeeaa1e98b80bc310",
+    "archive_root": "aurora-sep-userspace-72eaf547174745b9c1e008faeeaa1e98b80bc310",
+    "sha256": "d6d805b8f2c406a06a9e96e69a3ed9a0a62ada85c8b12a5185f6a9fce4330118"
+  },
+  "omdrop-awdl": {
+    "repository": "https://github.com/netmojo-systems/omdrop-awdl",
+    "commit": "ffc201f33773541063f2f3d57c8a279cad5ede11",
+    "version": "0.10.5",
+    "source_url": "https://codeload.github.com/netmojo-systems/omdrop-awdl/tar.gz/ffc201f33773541063f2f3d57c8a279cad5ede11",
+    "archive_root": "omdrop-awdl-ffc201f33773541063f2f3d57c8a279cad5ede11",
+    "sha256": "bc52318293615f773ef0f9a9523772a83bf73edaaf87b528e2a32856ff02d385",
+    "extra_sources": {
+      "omdrop-plugin": {
+        "repository": "https://github.com/netmojo-systems/omdrop-plugin",
+        "commit": "e5aa51a41f963e73b5a67914cae3c916a83739f1",
+        "source_url": "https://codeload.github.com/netmojo-systems/omdrop-plugin/tar.gz/e5aa51a41f963e73b5a67914cae3c916a83739f1",
+        "archive_root": "omdrop-plugin-e5aa51a41f963e73b5a67914cae3c916a83739f1",
+        "sha256": "db362d1fc13be701643cb5e4c390f292ea4e3ce006c0ebda5440b07763b90c41"
+      }
+    }
+  },
+  "aurora-speaker-upgrade": {
+    "repository": "https://github.com/aurora-silicon/speakerguardd",
+    "commit": "bbd9ed30ac43ff4fee3a8b279ff994180d8148cb",
+    "version": "0.1",
+    "source_url": "https://codeload.github.com/aurora-silicon/speakerguardd/tar.gz/bbd9ed30ac43ff4fee3a8b279ff994180d8148cb",
+    "archive_root": "speakerguardd-bbd9ed30ac43ff4fee3a8b279ff994180d8148cb",
+    "sha256": "fe81a2aae7c0d58b335ee5650db872c77b0de975fb369c323ddee303b29de83f"
+  },
+  "aurora-sep-luks": {
+    "repository": "https://github.com/aurora-silicon/aurora-sep-userspace",
+    "commit": "96f5aa45e6209cf94632d885a5b7c4c1bcc68209",
+    "version": "0.3.0",
+    "source_url": "https://codeload.github.com/aurora-silicon/aurora-sep-userspace/tar.gz/96f5aa45e6209cf94632d885a5b7c4c1bcc68209",
+    "archive_root": "aurora-sep-userspace-96f5aa45e6209cf94632d885a5b7c4c1bcc68209",
+    "sha256": "d4f8f57c940d9d0fd8ea285cc49528e9559434b9ba7a64cff0b23dc992b8224f"
+  },
+  "aurora-diag": {
+    "repository": "https://github.com/aurora-silicon/aurora-diag",
+    "commit": "168fcb3852ce2562cda9de90ca9315733e0ab5f6",
+    "version": "0.5.0",
+    "source_url": "https://codeload.github.com/aurora-silicon/aurora-diag/tar.gz/168fcb3852ce2562cda9de90ca9315733e0ab5f6",
+    "archive_root": "aurora-diag-168fcb3852ce2562cda9de90ca9315733e0ab5f6",
+    "sha256": "bfa2433cbc7cfe95604484e52740a60cc14d65e0c8b48142e83e6e4239ab3965"
+  },
+  "aurora-wifi-firmware": {
+    "repository": "https://github.com/aurora-silicon/aurora-installer",
+    "commit": "afdd3215189cb5badb85d22bdb255df4a7b3a9fa",
+    "version": "0.2",
+    "source_url": "https://codeload.github.com/aurora-silicon/aurora-installer/tar.gz/afdd3215189cb5badb85d22bdb255df4a7b3a9fa",
+    "archive_root": "aurora-installer-afdd3215189cb5badb85d22bdb255df4a7b3a9fa",
+    "sha256": "f7bcac6cb4713c3d8925c727cee154cc58e9c20546f0c1fe046344e6cf06199c"
+  }
+}
