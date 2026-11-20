@@ -1,0 +1,66 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  sanity:
+    name: Ebuild sanity checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Bash syntax of all ebuilds and module scripts
+        run: |
+          fail=0
+          while IFS= read -r f; do
+            bash -n "$f" || { echo "::error file=$f::bash -n failed"; fail=1; }
+          done < <(find . -name '*.ebuild' -o -name 'module-setup.sh' | sort)
+          exit $fail
+
+      - name: metadata.xml present and well-formed for every package
+        run: |
+          python3 - <<'EOF'
+          import pathlib, sys, xml.etree.ElementTree as ET
+          fail = False
+          for ebuild in sorted(pathlib.Path('.').rglob('*.ebuild')):
+              meta = ebuild.parent / 'metadata.xml'
+              if not meta.exists():
+                  print(f"::error file={ebuild}::no metadata.xml in {ebuild.parent}")
+                  fail = True
+                  continue
+              try:
+                  ET.parse(meta)
+              except ET.ParseError as e:
+                  print(f"::error file={meta}::XML parse error: {e}")
+                  fail = True
+          sys.exit(1 if fail else 0)
+          EOF
+
+      - name: Every Manifest DIST line is complete
+        run: |
+          fail=0
+          while IFS= read -r m; do
+            awk '($1=="DIST" && NF<4) {print FILENAME": incomplete DIST line: "$0; bad=1} END{exit bad}' "$m" \
+              || fail=1
+          done < <(find . -name Manifest | sort)
+          exit $fail
+
+  pkgcheck:
+    name: pkgcheck (informational)
+    runs-on: ubuntu-latest
+    # Informational for now: this overlay's masters are gentoo + asahi,
+    # and the stock action only provisions ::gentoo, so results may
+    # include missing-master noise. Promote to gating once the first
+    # runs show a clean signal.
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Run pkgcheck
+        uses: pkgcore/pkgcheck-action@v1
+        
