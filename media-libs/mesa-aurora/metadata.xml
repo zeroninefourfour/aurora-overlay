@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Aurora Gentoo overlay</name>
+	</maintainer>
+	<longdescription>
+		The Aurora mesa tree (pinned to the Aurora kernel's DRM UAPI):
+		Asahi Gallium and Zink OpenGL plus the Honeykrisp Vulkan driver,
+		built so the native drivers link neither LLVM nor SPIRV-Tools.
+		Shader precompilers come from dev-util/mesa_clc at the same pin.
+		Replaces media-libs/mesa.
+	</longdescription>
+	<upstream>
+		<remote-id type="github">aurora-silicon/mesa</remote-id>
+	</upstream>
+	<use>
+		<flag name="lm-sensors">Read hardware temperatures through lm-sensors</flag>
+		<flag name="vulkan">Build the Honeykrisp Vulkan driver for Asahi GPUs</flag>
+	</use>
+</pkgmetadata>

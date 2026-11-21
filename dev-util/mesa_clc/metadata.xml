@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Aurora Gentoo overlay</name>
+	</maintainer>
+	<longdescription>
+		The OpenCL C compilers of the Aurora mesa tree (mesa_clc, asahi_clc
+		and vtn_bindgen2), split out like ::gentoo's dev-util/mesa_clc so
+		that media-libs/mesa-aurora can precompile its shaders with the
+		system compilers and link no LLVM itself.
+	</longdescription>
+	<upstream>
+		<remote-id type="github">aurora-silicon/mesa</remote-id>
+	</upstream>
+	<use>
+		<flag name="video_cards_asahi">Build asahi_clc, the Asahi shader precompiler</flag>
+	</use>
+</pkgmetadata>

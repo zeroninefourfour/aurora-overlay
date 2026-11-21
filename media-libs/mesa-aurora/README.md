@@ -1,40 +1,38 @@
-# mesa-aurora — why there is no ebuild here yet
+# mesa-aurora — ported 2026-11-21
 
+`mesa-aurora-26.3.0.ebuild` in this directory is a real ebuild now.
 Aurora Mesa is a *pin*, not a fork with patches: `aurora-silicon/mesa`
 commit `d4ad4a4dce6d1d23ecd897d6d73fadf9ab618614`, version 26.3.0,
 matched to the DRM UAPI in the pinned Aurora kernel.
 
-The other Aurora distros build it with:
+## How the port is shaped
 
-```
--Dplatforms=x11,wayland
--Dgallium-drivers=asahi,zink,softpipe
--Dvulkan-drivers=asahi          # Honeykrisp
--Dglvnd=enabled -Degl=enabled -Dgbm=enabled
--Dgallium-rusticl=true          # in a separate LLVM-linked build tree
-```
+alarm-aurora builds one LLVM-linked "tools" tree (CL compilers +
+Rusticl + lavapipe) and one native tree. Gentoo already has the same
+split, so the port follows it:
 
-and, critically, the *installed* GL/Vulkan binaries must NOT link
-`libLLVM` or `libSPIRV-Tools` (a two-tree build: first build the CL
-compilers with LLVM, then rebuild Mesa against them with
-`-Dllvm=disabled`). Arch/Fedora learned this the hard way: a Mesa
-linked against the old LLVM soname leaves the machine with no GPU
-after an LLVM bump.
+- `dev-util/mesa_clc` 26.3.0 (this overlay, same tarball) builds
+  `mesa_clc`, `vtn_bindgen2` and `asahi_clc` against LLVM/libclc.
+- `media-libs/mesa-aurora` builds the native drivers with
+  `-Dllvm=disabled -Dspirv-tools=disabled -Dmesa-clc=system
+  -Dprecomp-compiler=system`, gallium `asahi,zink,softpipe`, vulkan
+  `asahi` (Honeykrisp). It blocks `media-libs/mesa`.
+- The invariant alarm checks in its `check()` — no installed `.so`
+  may have a NEEDED entry for libLLVM or libSPIRV-Tools — runs at the
+  end of `src_install` here, and `src_test` verifies the Honeykrisp
+  version string `(git-d4ad4a4dce), Borealis`.
 
-On Gentoo, `media-libs/mesa` in ::gentoo already builds the Asahi
-Gallium driver and Honeykrisp Vulkan driver from a *release* Mesa.
-So the Gentoo-correct way to ship the Aurora pin is one of:
+## Not yet ported from the alarm pkgbase
 
-1. **Preferred, short term:** use ::gentoo `media-libs/mesa` with
-   `VIDEO_CARDS=asahi` — accept that it is not the Aurora pin, and
-   only diverge if a real bug appears against the Aurora kernel UAPI.
-2. **Pin-accurate:** copy ::gentoo's mesa ebuild (it is large and
-   eclass-heavy) into this directory as `mesa-aurora`, point
-   `SRC_URI` at the pinned codeload tarball, set
-   `MESA_GIT_SHA1_OVERRIDE=d4ad4a4dce6d...`, and reproduce the
-   two-tree LLVM isolation. This must be done on an arm64 Gentoo
-   machine where the result can be test-built — it is not honestly
-   writable blind, which is why it is not faked here.
+- `opencl-rusticl-aurora` and `vulkan-lavapipe-aurora` (they link LLVM
+  at runtime by design and ship separately in alarm too).
+- `mesa-aurora-fex-guest` (x86_64/i686 FEX guest layer).
 
-Do NOT write a naive `meson setup` ebuild for Mesa: you will lose
-::gentoo's multilib, video-card and ICD handling.
+## Verification status
+
+Distfile sha256 matches the sources.json pin; both Manifests are
+generated; `emerge -pv dev-util/mesa_clc media-libs/mesa-aurora`
+resolves (77 packages) in the arm64 chroot. The full compile has NOT
+been run under qemu (mesa is a multi-hour emulated build); like the
+Rust packages in this overlay, it is expected to build natively on
+real hardware first.

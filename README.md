@@ -15,7 +15,7 @@ On Apple Silicon there is no "one driver package". It splits 4 ways:
 | Hardware | Where the driver is | Gentoo package here |
 |---|---|---|
 | GPU (AGX), display (DCP), ISP camera, AOP, SEP, ANE, audio SoC, SMC, DART, AIC, USB4 / DP Alt, VRR | **In the kernel tree** (`DRM_ASAHI`, `DRM_APPLE`, `APPLE_AOP`, `APPLE_SEP`, …) | `sys-kernel/aurora-sources` 7.3.0 (commit `9125b31`) + `files/aurora-universal.config` (9809 lines, 16K pages) |
-| GPU userspace (OpenGL / Vulkan Honeykrisp / Rusticl) | Mesa | ::gentoo `media-libs/mesa` `VIDEO_CARDS=asahi` for now — see `media-libs/mesa-aurora/README.md` for why the pin is not blind-copied |
+| GPU userspace (OpenGL / Vulkan Honeykrisp) | Mesa | `media-libs/mesa-aurora` 26.3.0 (pin `d4ad4a4`, matched to the aurora-sources UAPI; native drivers link no LLVM — CL compilers in `dev-util/mesa_clc` at the same pin). Rusticl/lavapipe not ported yet |
 | Video decode (AVD) | Kernel driver + **open firmware** + VA-API bridge | `sys-firmware/avd-fw` (LLVM 22 only!) + `media-libs/libva-v4l2-request-avd` |
 | Stage 1/2 boot | m1n1 fork + U-Boot fork | `sys-boot/aura` 1.0.0b13 (monitor-free, needs `CONFIG_ARM64_CTXR_EXECMEM=y`) + `sys-boot/uboot-aurora` 2026.07 (J700/Neo) |
 | Wi-Fi / BT / peripherals | Blobs are **per-machine, extracted from your own macOS**, never shipped | `sys-firmware/asahi-firmware` (from asahi-overlay) extracts them; `sys-firmware/aurora-firmware` admits peripherals after the ESP vendor-firmware handoff (dracut module included); `sys-firmware/aurora-wifi-firmware` keeps Wi-Fi/BT firmware in sync with the installed macOS |
@@ -77,8 +77,7 @@ hardware** (no arm64 Mac in this environment). Expect, in order:
    rustup; this ebuild uses system rust like asahi-overlay's m1n1);
 3. kernel config drift when merging Gentoo requirements.
 
-Not yet ported, deliberately not faked: `mesa-aurora` (see its
-README), SEP userspace
+Not yet ported, deliberately not faked: SEP userspace
 (`aurora-sep*`, `aurora-fido`, `aurora-xart`, Touch ID/libfprint),
 ANE userspace (`omarchy-ane-tools`, `mil-hwx-compiler`), FEX guest
 Mesa, and the desktop patches (mutter/kwin/pipewire/…).
@@ -170,3 +169,16 @@ compile-verified anywhere: the Rust packages (aura, aurora-bless,
 speakerguardd, speakersafetyd) and avd-fw — they build natively on
 real hardware; a full NetworkManager compile under qemu is a
 multi-hour run and was still in progress at publish time.
+
+## Added 2026-11-21 — mesa-aurora + CI pkgcheck fix
+
+- `media-libs/mesa-aurora` 26.3.0 and `dev-util/mesa_clc` 26.3.0 are
+  real ebuilds (see `media-libs/mesa-aurora/README.md`). Chroot-checked:
+  distfile sha256 vs the pin, both Manifests, and
+  `emerge -pv dev-util/mesa_clc media-libs/mesa-aurora` resolving
+  (77 packages). Full compile not attempted under qemu.
+- CI: the pkgcheck job's 10 `NonsolvableDepsInStable` errors were
+  profile artifacts — this overlay targets the systemd profile, and
+  ::gentoo's stable OpenRC/split-usr profiles mask `sys-apps/systemd`
+  by design. `metadata/pkgcheck.conf` now disables only that keyword;
+  every other pkgcheck check stays on.
