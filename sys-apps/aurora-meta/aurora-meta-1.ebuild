@@ -3,10 +3,9 @@
 
 EAPI=8
 
-S="${WORKDIR}"
-
 DESCRIPTION="Aurora Silicon driver stack for Gentoo (metapackage)"
 HOMEPAGE="https://github.com/aurora-silicon"
+S="${WORKDIR}"
 LICENSE="metapackage"
 SLOT="0"
 KEYWORDS="-* ~arm64"

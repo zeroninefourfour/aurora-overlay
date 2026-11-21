@@ -3,11 +3,12 @@
 <pkgmetadata>
 	<maintainer type="person">
 		<name>Aurora Gentoo overlay</name>
+		<email>zeroninefourfour@users.noreply.github.com</email>
 	</maintainer>
 	<longdescription>
 		Metapackage pulling in the Aurora Silicon driver stack for Gentoo on Apple Silicon.
 	</longdescription>
-	<upstream>
-		<remote-id type="github">aurora-silicon</remote-id>
-	</upstream>
+	<use>
+		<flag name="video-decoding">Pull in the AVD firmware and VA-API driver for hardware video decoding</flag>
+	</use>
 </pkgmetadata>

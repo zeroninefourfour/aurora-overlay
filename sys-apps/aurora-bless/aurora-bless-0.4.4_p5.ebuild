@@ -80,7 +80,7 @@ inherit cargo systemd
 
 COMMIT="9b47a17827854588d458b1dcc8018c66f5c3237f"
 
-DESCRIPTION="Aurora Apple Silicon startup-volume selector, NVRAM, BT sync and panel brightness"
+DESCRIPTION="Aurora startup-volume selector, NVRAM and Bluetooth sync tools"
 HOMEPAGE="https://github.com/aurora-silicon/aurora-bless"
 
 SRC_URI="https://codeload.github.com/aurora-silicon/aurora-bless/tar.gz/${COMMIT} -> ${PN}-${COMMIT}.tar.gz
@@ -100,7 +100,6 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}"
 BDEPEND="virtual/pkgconfig"
-
 
 src_compile() {
 	cargo build --locked --release --offline \

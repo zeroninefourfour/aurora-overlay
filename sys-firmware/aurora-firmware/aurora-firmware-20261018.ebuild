@@ -23,10 +23,10 @@ EAPI=8
 inherit systemd
 
 # No upstream tarball: the payload is entirely in FILESDIR.
-S="${WORKDIR}"
 
 DESCRIPTION="Aurora target-device firmware and peripheral admission"
 HOMEPAGE="https://github.com/aurora-silicon/alarm-aurora"
+S="${WORKDIR}"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="-* ~arm64"

@@ -12,22 +12,21 @@
 
 EAPI=8
 
-inherit meson systemd
+inherit meson
 
 _COMMIT="aa7a42ff3f26ac47c07b4cdb4ab1bfc5337291af"
-DESCRIPTION="PipeWire filter that denoises the built-in camera on Apple silicon laptops, like macOS"
+DESCRIPTION="PipeWire filter denoising the built-in camera on Apple silicon"
 HOMEPAGE="https://github.com/aurora-silicon/camera-denoise"
 SRC_URI="https://codeload.github.com/aurora-silicon/camera-denoise/tar.gz/${_COMMIT} -> ${P}-${_COMMIT:0:7}.tar.gz"
+
+S="${WORKDIR}/camera-denoise-${_COMMIT}"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~arm64"
-IUSE=""
 
 DEPEND="media-video/pipewire"
 RDEPEND="${DEPEND}"
-
-S="${WORKDIR}/camera-denoise-${_COMMIT}"
 
 src_configure() {
 	local emesonargs=(

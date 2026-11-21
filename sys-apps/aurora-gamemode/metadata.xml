@@ -3,6 +3,7 @@
 <pkgmetadata>
 	<maintainer type="person">
 		<name>Aurora Gentoo overlay</name>
+		<email>zeroninefourfour@users.noreply.github.com</email>
 	</maintainer>
 	<longdescription>GameMode defaults for Apple silicon (games on the P cores, schedutil kept), ported from alarm-aurora (aurora-platform split package).</longdescription>
 	<upstream>

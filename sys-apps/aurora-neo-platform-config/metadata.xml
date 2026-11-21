@@ -3,6 +3,7 @@
 <pkgmetadata>
 	<maintainer type="person">
 		<name>Aurora Gentoo overlay</name>
+		<email>zeroninefourfour@users.noreply.github.com</email>
 	</maintainer>
 	<longdescription>Driver-scoped NetworkManager and trackpad configuration for the MacBook Neo (J700), ported from alarm-aurora.</longdescription>
 	<upstream>

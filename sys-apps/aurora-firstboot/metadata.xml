@@ -3,6 +3,7 @@
 <pkgmetadata>
 	<maintainer type="person">
 		<name>Aurora Gentoo overlay</name>
+		<email>zeroninefourfour@users.noreply.github.com</email>
 	</maintainer>
 	<longdescription>Aurora per-install root encryption and Linux owner setup, ported from alarm-aurora (aurora-platform). Uses the upstream dracut module (97aurora-root) instead of the mkinitcpio hook.</longdescription>
 	<upstream>

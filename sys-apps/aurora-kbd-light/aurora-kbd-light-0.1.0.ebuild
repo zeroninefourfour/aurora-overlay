@@ -11,18 +11,17 @@
 
 EAPI=8
 
-inherit systemd udev
+inherit udev
 
 _COMMIT="727076b83eb65b0162317a9e2fa0ba850df1f5ca"
-DESCRIPTION="Keyboard backlight that follows the ambient light sensor on Apple silicon MacBooks, like macOS"
+DESCRIPTION="Keyboard backlight daemon following the ambient light sensor"
 HOMEPAGE="https://github.com/aurora-silicon/kbd-light"
 SRC_URI="https://codeload.github.com/aurora-silicon/kbd-light/tar.gz/${_COMMIT} -> ${P}-${_COMMIT:0:7}.tar.gz"
+S="${WORKDIR}/kbd-light-${_COMMIT}"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~arm64"
-
-S="${WORKDIR}/kbd-light-${_COMMIT}"
 
 src_compile() {
 	emake CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"

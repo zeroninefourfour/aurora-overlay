@@ -3,6 +3,7 @@
 <pkgmetadata>
 	<maintainer type="person">
 		<name>Aurora Gentoo overlay</name>
+		<email>zeroninefourfour@users.noreply.github.com</email>
 	</maintainer>
 	<longdescription>
 		ALSA UCM configuration for Apple Silicon devices, pinned to the aurora-silicon sources.json revision shared by the Aurora distro ports.

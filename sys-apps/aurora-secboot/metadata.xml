@@ -3,6 +3,7 @@
 <pkgmetadata>
 	<maintainer type="person">
 		<name>Aurora Gentoo overlay</name>
+		<email>zeroninefourfour@users.noreply.github.com</email>
 	</maintainer>
 	<longdescription>Signed unified kernel images for the Aurora secure boot path, ported from alarm-aurora (aurora-platform split package). Uses the kernel-install plugin; the Arch mkinitcpio post hook is not installed.</longdescription>
 	<upstream>

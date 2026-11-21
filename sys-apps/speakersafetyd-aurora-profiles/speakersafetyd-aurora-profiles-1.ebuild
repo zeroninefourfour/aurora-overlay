@@ -19,10 +19,10 @@
 EAPI=8
 
 # No upstream tarball: the payload is entirely in FILESDIR.
-S="${WORKDIR}"
 
 DESCRIPTION="speakersafetyd profiles for Aurora-supported Macs and warm restarts"
 HOMEPAGE="https://github.com/aurora-silicon/alarm-aurora"
+S="${WORKDIR}"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="-* ~arm64"

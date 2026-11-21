@@ -10,7 +10,7 @@ inherit optfeature
 
 COMMIT="168fcb3852ce2562cda9de90ca9315733e0ab5f6"
 
-DESCRIPTION="Bring-up diagnostics and regression checks for Apple silicon Macs (Aurora, development only)"
+DESCRIPTION="Bring-up diagnostics and regression checks for Apple silicon Macs"
 HOMEPAGE="https://github.com/aurora-silicon/aurora-diag"
 SRC_URI="https://codeload.github.com/aurora-silicon/aurora-diag/tar.gz/${COMMIT} -> ${PN}-${COMMIT}.tar.gz"
 S="${WORKDIR}/${PN}-${COMMIT}"

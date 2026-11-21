@@ -3,6 +3,7 @@
 <pkgmetadata>
 	<maintainer type="person">
 		<name>Aurora Gentoo overlay</name>
+		<email>zeroninefourfour@users.noreply.github.com</email>
 	</maintainer>
 	<longdescription>
 		Aurora kernel sources for Apple Silicon with the Aurora universal config (16K pages, in-tree DRM_ASAHI/DCP/AVD drivers).

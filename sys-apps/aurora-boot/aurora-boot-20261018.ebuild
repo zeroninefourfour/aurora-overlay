@@ -25,10 +25,10 @@
 EAPI=8
 
 # No upstream tarball: the payload is entirely in FILESDIR.
-S="${WORKDIR}"
 
 DESCRIPTION="Aurora boot integration: early-KMS initrd display, GRUB defaults, image preset"
 HOMEPAGE="https://github.com/aurora-silicon/alarm-aurora"
+S="${WORKDIR}"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="-* ~arm64"

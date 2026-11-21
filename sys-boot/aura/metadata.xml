@@ -3,6 +3,7 @@
 <pkgmetadata>
 	<maintainer type="person">
 		<name>Aurora Gentoo overlay</name>
+		<email>zeroninefourfour@users.noreply.github.com</email>
 	</maintainer>
 	<longdescription>
 		Aura, the Aurora fork of the m1n1 bootloader/hypervisor for Apple Silicon. Monitor-free build; requires sys-kernel/aurora-sources.
@@ -10,4 +11,7 @@
 	<upstream>
 		<remote-id type="github">aurora-silicon/aura</remote-id>
 	</upstream>
+	<use>
+		<flag name="clang">Build with Clang instead of GCC</flag>
+	</use>
 </pkgmetadata>

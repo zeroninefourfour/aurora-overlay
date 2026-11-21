@@ -3,6 +3,7 @@
 <pkgmetadata>
 	<maintainer type="person">
 		<name>Aurora Gentoo overlay</name>
+		<email>zeroninefourfour@users.noreply.github.com</email>
 	</maintainer>
 	<longdescription>
 		Open replacement firmware for the Apple Video Decoder (AVD), built with LLVM 22 only to keep the firmware bytes reproducible.

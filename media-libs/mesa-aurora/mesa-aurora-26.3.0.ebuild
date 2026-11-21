@@ -198,7 +198,7 @@ src_test() {
 		# alarm's check: the Honeykrisp driver must carry this tree's
 		# git identity ("Borealis" is the asahi vulkan codename).
 		local vk_so
-		vk_so=$(find "${BUILD_DIR}" -name 'libvulkan_asahi.so' | head -1)
+		vk_so=$(find "${BUILD_DIR}" -name 'libvulkan_asahi.so' | head -n 1)
 		[[ -n ${vk_so} ]] || die "libvulkan_asahi.so not found in build dir"
 		strings "${vk_so}" | grep -F "(git-${COMMIT:0:10}), Borealis" \
 			|| die "libvulkan_asahi.so lacks the Aurora git version string"

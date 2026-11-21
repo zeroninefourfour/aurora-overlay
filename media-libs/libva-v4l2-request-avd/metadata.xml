@@ -3,6 +3,7 @@
 <pkgmetadata>
 	<maintainer type="person">
 		<name>Aurora Gentoo overlay</name>
+		<email>zeroninefourfour@users.noreply.github.com</email>
 	</maintainer>
 	<longdescription>
 		VA-API driver on top of V4L2 stateless request decoders, carrying the fixes needed by the Apple AVD decoder in the Aurora kernel.
@@ -10,4 +11,10 @@
 	<upstream>
 		<remote-id type="github">omacom/libva-v4l2_request</remote-id>
 	</upstream>
+	<use>
+		<flag name="av1">Enable AV1 decoding via the V4L2 Request API</flag>
+		<flag name="h264">Enable H.264 decoding via the V4L2 Request API</flag>
+		<flag name="hevc">Enable H.265/HEVC decoding via the V4L2 Request API</flag>
+		<flag name="vp9">Enable VP9 decoding via the V4L2 Request API</flag>
+	</use>
 </pkgmetadata>

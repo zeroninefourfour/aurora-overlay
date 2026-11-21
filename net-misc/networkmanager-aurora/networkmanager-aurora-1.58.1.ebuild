@@ -20,7 +20,7 @@ PYTHON_COMPAT=( python3_{12..15} )
 inherit linux-info meson-multilib flag-o-matic python-any-r1 \
 	readme.gentoo-r1 systemd toolchain-funcs udev vala virtualx
 
-DESCRIPTION="Network connection manager, keeping Wake-on-LAN devices that stay activated across sleep (Aurora)"
+DESCRIPTION="Network connection manager (Aurora WoL keep-activated build)"
 HOMEPAGE="
 	https://www.networkmanager.dev
 	https://gitlab.freedesktop.org/NetworkManager/NetworkManager

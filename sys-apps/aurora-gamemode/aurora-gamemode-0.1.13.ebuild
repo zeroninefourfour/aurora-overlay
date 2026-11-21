@@ -9,7 +9,7 @@ EAPI=8
 
 COMMIT="ddf5285e116b3551ed2b025112f86effaadf299d"
 
-DESCRIPTION="GameMode defaults for Apple silicon: games on the P cores, schedutil kept (Aurora)"
+DESCRIPTION="GameMode defaults for Apple silicon Macs (Aurora)"
 HOMEPAGE="https://github.com/aurora-silicon/aurora-platform"
 SRC_URI="https://codeload.github.com/aurora-silicon/aurora-platform/tar.gz/${COMMIT} -> aurora-platform-${COMMIT}.tar.gz"
 S="${WORKDIR}/aurora-platform-${COMMIT}"
